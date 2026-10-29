@@ -1,0 +1,4 @@
+# Apache: send everything that is not an existing file to the front controller.
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^ index.php [QSA,L]
